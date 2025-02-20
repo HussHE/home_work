@@ -18,21 +18,20 @@
 
 void main(List<String> args) {
   Solution nums = Solution();
-  print(nums.containsDuplicate(nums: [1, 3, 5, 6]));
+  print(nums.containsDuplicate(nums: [1, 1, 3, 5, 6, 6]));
 }
 
 class Solution {
   bool containsDuplicate({List<int>? nums}) {
     if (nums != null) {
-      for (int i = 0; i < nums.length; i++) {
-        int compare = nums[0];
-        for (int j = 0; j < nums.length; j++) {
-          if (nums[j] == compare) {
-            return true;
-          }
+      Set<int> notDuplicated = {};
+      for (var number in nums) {
+        if (!notDuplicated.add(number)) {
+          return true;
         }
       }
     }
     return false;
   }
 }
+//يرجي شرحه في السيشن لعدم فهمه جيدا مع اني حليته بس نحس ان حلي غلط مش متأكد
