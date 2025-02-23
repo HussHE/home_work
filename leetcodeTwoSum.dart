@@ -14,14 +14,14 @@
 
 void main(List<String> args) {
   Solution nums = Solution();
-  print(nums.twoSum([1, 3, 5, 6, 6], 7));
+  print(nums.twoSum([1, 3, 5, 6, 6], 9));
 }
 
 class Solution {
   List<int> twoSum(List<int> nums, int target) {
     for (int i = 0; i < nums.length; i++) {
-      for (int j = i + 1; j < nums.length; j++) {
-        if (nums[i] + nums[j] == target) {
+      for (int j = 1 + i; j < nums.length; j++) {
+        if (target == nums[i] + nums[j]) {
           return [i, j];
         }
       }
