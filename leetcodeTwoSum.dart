@@ -19,12 +19,22 @@ void main(List<String> args) {
 
 class Solution {
   List<int> twoSum(List<int> nums, int target) {
-    for (var i = 0; i < nums.length; i++) {
-      var numNeeded = nums[i] - target;
-      if (target == nums[i] + numNeeded) {
-        return [nums[numNeeded], i];
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        if (nums[i] + nums[j] == target) {
+          return [i, j];
+        }
       }
     }
     return [];
   }
 }
+
+
+//  for (var i = 1; i < nums.length; i++) {
+//       var numNeeded = nums[0];
+//       if (target == nums[i] + numNeeded) {
+//         return [nums[numNeeded], i];
+//       } else {
+//         numNeeded = nums[i] - target;
+//       }
