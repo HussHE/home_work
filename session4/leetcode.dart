@@ -18,7 +18,7 @@
 
 void main(List<String> args) {
   Solution nums = Solution();
-  print(nums.containsDuplicate(nums: [1, 1, 3, 5, 6, 6]));
+  print(nums.containsDuplicate(nums: [1, 3, 5, 6, 6]));
 }
 
 class Solution {
@@ -26,12 +26,12 @@ class Solution {
     if (nums != null) {
       Set<int> notDuplicated = {};
       for (var number in nums) {
-        if (!notDuplicated.add(number)) {
+        if (notDuplicated.contains(number)) {
           return true;
         }
+        notDuplicated.add(number);
       }
     }
     return false;
   }
 }
-//يرجي شرحه في السيشن لعدم فهمه جيدا مع اني حليته بس نحس ان حلي غلط في الريترن الاخيره مش متأكد
