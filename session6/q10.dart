@@ -7,37 +7,59 @@
 // - PartTimeEmployee: Adds hoursWorked and hourlyRate, overriding calculateSalary() to compute
 // salary based on hours worked.
 
-void main() {}
+void main() {
+  Employee tantan = Employee(name: "hussein", id: 123, salary: 2000);
+  print(tantan.calculateSalary());
 
-abstract class Employee {
+  FullTimeEmployee tantan1 =
+      FullTimeEmployee(name: "hussein", id: 341, salary: 2000, bonus: 10);
+  print(tantan1.calculateSalary());
+}
+
+class Employee {
   final String name;
   final int id;
-  final double salary;
+  final num salary;
 
-  Employee({required this.name, required this.id, required this.salary});
+  Employee({
+    required this.name,
+    required this.id,
+    required this.salary,
+  });
 
-  calculateSalary();
+  num calculateSalary() {
+    return salary * 12;
+  }
 }
 
 class FullTimeEmployee extends Employee {
-  double? bonus;
-  FullTimeEmployee(
-      {required super.name, required super.id, required super.salary});
+  num? bonus;
+  FullTimeEmployee({
+    required super.name,
+    required super.id,
+    required super.salary,
+    required this.bonus,
+  });
 
   @override
-  double calculateSalary() {
-    return salary + bonus!;
+  num calculateSalary() {
+    return super.calculateSalary() + bonus!;
   }
 }
 
 class PartTimeEmployee extends Employee {
   double? hoursWorked;
   double? hourlyRate;
-  PartTimeEmployee(
-      {required super.name, required super.id, required super.salary});
+  PartTimeEmployee({
+    required super.name,
+    required super.id,
+    required super.salary,
+    required this.hoursWorked,
+    required this.hourlyRate,
+  });
 
   @override
-  double calculateSalary() {
+  num calculateSalary() {
     return hoursWorked! * hourlyRate!;
   }
 }

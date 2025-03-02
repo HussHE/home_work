@@ -7,29 +7,62 @@
 // - returnBook(String isbn): Marks a book as available again.
 // - searchByTitle(String title): Returns books matching the title.
 // Ensure that the system correctly updates the book's availability
+void main(List<String> args) {
+  Book bk = Book(title: "asd", author: "me", isbn: "123", isAvailable: true);
+  Book bk2 = Book(title: "qwe", author: "mfd", isbn: "345", isAvailable: true);
+  Book bk3 =
+      Book(title: "dfghs", author: "hjjd", isbn: "567", isAvailable: false);
+
+  Library book = Library();
+  book.addBook(bk);
+  book.addBook(bk2);
+  book.addBook(bk3);
+}
 
 class Book {
-  String title;
-  String author;
-  String isbn;
-  bool isAvailable;
+  final String title;
+  final String author;
+  final String isbn;
+  bool isAvailable = true;
 
-  Book(this.title, this.author, this.isbn, this.isAvailable);
+  Book(
+      {required this.title,
+      required this.author,
+      required this.isbn,
+      required this.isAvailable});
 }
 
 class Library {
-  List<Book> books = [];
+  List<Book> _books = [];
 
   void addBook(Book book) {
-    books.add(book);
+    _books.add(book);
   }
 
-  void borrowBook(String isbn) {}
+  void borrowBook(String isbn) {
+    for (var book in _books) {
+      if (book.isbn == isbn && book.isAvailable) {
+        book.isAvailable = false;
+      }
+    }
+    print("Book not found");
+  }
 
-  void returnBook(String isbn) {}
+  void returnBook(String isbn) {
+    for (var book in _books) {
+      if (book.isbn == isbn) {
+        book.isAvailable = true;
+      }
+    }
+  }
 
-  List<Book> searchByTitle(String title) {
-    List<Book> result = [];
-    return result;
+  List searchByTitle(String title) {
+    List<Book> books = [];
+    for (var book in _books) {
+      if (book.title == title || book.title.contains(title)) {
+        books.add(book);
+      }
+    }
+    return books;
   }
 }
