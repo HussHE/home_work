@@ -10,11 +10,10 @@ class ImageSection extends StatelessWidget {
         Image.asset("assets/images/img.jpg"),
         Positioned(
           right: 20,
-          bottom: 20,
+          bottom: 10,
           child: Container(
             decoration: BoxDecoration(
               color: const Color(0x8A000000),
-
               borderRadius: BorderRadius.circular(20),
             ),
             width: 75,

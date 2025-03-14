@@ -10,7 +10,7 @@ class ButtomSection extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: const Color(0xFFF1F8FE),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         children: [
@@ -26,7 +26,7 @@ class ButtomSection extends StatelessWidget {
           ),
           SizedBox(height: 5),
           Text(
-            maxLines: 30,
+            maxLines: 50,
             "sdsdfasdqertqgsdrtsdfgsdfgsdf sdfgsdf gsdf sdfgs dasdfasdfasdteyhertyh erth rtyrtyrt ertyertyrtyrty ertyertyertrtyert ertyertyerty ertyertyrtyrt erty erty ertyertye rtyert yerty erty ert sdfgsdfgsdf sdfgsdf gsdf sdfgs dasdfasdfasdfas asdfasdf asd asdfasdf asdfasdf asd asd. teyhertyh erth rtyrtyrt ertyertyrtyrty ertyertyertrtyert ertyertyerty ertyertyrtyrt erty erty ertyertye rtyert yerty erty ert sdfgsdfgsdf sdfgsdf gsdf sdfgs dasdfasdfasdfas asdfasdf asd asdfasdf asdfasdf asd asd. fas asdfasdf asd asdfasdf asdfasdf asd asd. teyhertyh erth rtyrtyrt ertyertyrtyrty ertyertyertrtyert ertyertyerty ertyertyrtyrt erty erty ertyertye rtyert yerty erty ert sdfgsdfgsdf sdfgsdf gsdf sdfgs dasdfasdfasdfas asdfasdf asd asdfasdf asdfasdf asd asd. ",
           ),
         ],

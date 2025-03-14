@@ -22,7 +22,6 @@ class Homepage extends StatelessWidget {
           ],
         ),
         body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               ImageSection(),
@@ -43,6 +42,7 @@ class Homepage extends StatelessWidget {
               About(),
               SizedBox(height: 15),
               ButtomSection(),
+              SizedBox(height: 20),
             ],
           ),
         ),
