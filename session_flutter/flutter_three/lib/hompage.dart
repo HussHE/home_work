@@ -1,7 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_three/custom_elevatid_button.dart';
+import 'package:flutter_three/custom_elevated_button.dart';
 import 'package:flutter_three/even_odd_section.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -14,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  late Color randomColor;
+  Color randomColor = Colors.orange;
   double sizeFont = 26;
 
   void _incrementCounter() {
