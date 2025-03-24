@@ -1,4 +1,8 @@
+import 'package:five_grocery_app/constants/assets.dart';
+import 'package:five_grocery_app/styles/app_colors.dart';
+import 'package:five_grocery_app/styles/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ViewThree extends StatelessWidget {
   const ViewThree({super.key});
@@ -9,7 +13,7 @@ class ViewThree extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Color(0xffE67F1E)),
+          icon: Icon(Icons.arrow_back, color: AppColors.secondary),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -18,19 +22,19 @@ class ViewThree extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/bike.png", fit: BoxFit.fill),
+            SvgPicture.asset(Assets.imagesBike),
             SizedBox(height: 130),
             Text(
               "Fast and responsibily\n delivery by our courir ",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: AppText.bold24,
             ),
 
             SizedBox(height: 15),
             Text(
               "Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed do eiusmod tempor ",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14, color: Colors.black38),
+              style: AppText.regular14,
             ),
 
             SizedBox(height: 24),
@@ -43,7 +47,7 @@ class ViewThree extends StatelessWidget {
                     height: 7,
                     width: 25,
                     decoration: BoxDecoration(
-                      color: (i == 2) ? Color(0xff12B76A) : Color(0xffF2F2F2),
+                      color: (i == 2) ? AppColors.green : Color(0xffF2F2F2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -58,10 +62,7 @@ class ViewThree extends StatelessWidget {
                 backgroundColor: Colors.black,
                 fixedSize: Size(318, 60),
               ),
-              child: Text(
-                "CREATE AN ACCOUNT",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+              child: Text("CREATE AN ACCOUNT", style: AppText.bold16white),
             ),
             SizedBox(height: 18),
 
@@ -73,10 +74,7 @@ class ViewThree extends StatelessWidget {
                 foregroundColor: Colors.black,
                 fixedSize: Size(318, 60),
               ),
-              child: Text(
-                "LOGIN",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+              child: Text("LOGIN", style: AppText.bold16black),
             ),
           ],
         ),

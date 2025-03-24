@@ -16,6 +16,16 @@ abstract class AppText {
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
+  static const TextStyle bold16black = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+  static const TextStyle bold16white = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
   static const TextStyle light24 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w400,
@@ -46,6 +56,7 @@ abstract class AppText {
     fontWeight: FontWeight.w500,
     color: Colors.black,
   );
+
   static const TextStyle medium14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
@@ -55,5 +66,9 @@ abstract class AppText {
     fontSize: 12,
     fontWeight: FontWeight.w500,
     color: Colors.black,
+  );
+  static const TextStyle regular14 = TextStyle(
+    fontSize: 14,
+    color: Colors.black38,
   );
 }

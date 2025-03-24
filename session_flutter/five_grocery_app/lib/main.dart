@@ -1,4 +1,4 @@
-import 'package:five_grocery_app/views/onboard_view/logo_view.dart';
+import 'package:five_grocery_app/views/onboard_view/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: const LogoView(),
+      home: const SplashView(),
     );
   }
 }

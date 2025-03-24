@@ -1,15 +1,18 @@
 import 'dart:async';
+import 'package:five_grocery_app/constants/assets.dart';
+import 'package:five_grocery_app/styles/app_colors.dart';
 import 'package:five_grocery_app/views/onboard_view/view_one.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-class LogoView extends StatefulWidget {
-  const LogoView({super.key});
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
 
   @override
-  State<LogoView> createState() => _LogoViewState();
+  State<SplashView> createState() => _SplashViewState();
 }
 
-class _LogoViewState extends State<LogoView> {
+class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
@@ -25,10 +28,8 @@ class _LogoViewState extends State<LogoView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFEC54B),
-      body: Center(
-        child: Image.asset("assets/images/logo.png", fit: BoxFit.fill),
-      ),
+      backgroundColor: AppColors.primary,
+      body: Center(child: SvgPicture.asset(Assets.imagesSplashScreen)),
     );
   }
 }

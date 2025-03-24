@@ -1,3 +1,6 @@
+import 'package:five_grocery_app/constants/assets.dart';
+import 'package:five_grocery_app/styles/app_colors.dart';
+import 'package:five_grocery_app/styles/app_text.dart';
 import 'package:five_grocery_app/views/onboard_view/view_three.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +13,7 @@ class ViewTwo extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Color(0xffE67F1E)),
+          icon: Icon(Icons.arrow_back, color: AppColors.secondary),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -19,19 +22,19 @@ class ViewTwo extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/grocery.png", fit: BoxFit.fill),
+            Image.asset(Assets.imagesGrocerypng),
             SizedBox(height: 20),
             Text(
               "We provide best quality \nFruits to your family",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: AppText.bold24,
             ),
 
             SizedBox(height: 15),
             Text(
               "Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed ",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14, color: Colors.black38),
+              style: AppText.regular14,
             ),
 
             SizedBox(height: 34),
@@ -44,7 +47,7 @@ class ViewTwo extends StatelessWidget {
                     height: 7,
                     width: 25,
                     decoration: BoxDecoration(
-                      color: (i == 1) ? Color(0xff12B76A) : Color(0xffF2F2F2),
+                      color: (i == 1) ? AppColors.green : Color(0xffF2F2F2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -61,13 +64,10 @@ class ViewTwo extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black,
-                backgroundColor: Color(0xffFEC54B),
+                backgroundColor: AppColors.primary,
                 fixedSize: Size(318, 60),
               ),
-              child: Text(
-                "NEXT",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+              child: Text("NEXT", style: AppText.bold16black),
             ),
           ],
         ),

@@ -1,3 +1,6 @@
+import 'package:five_grocery_app/constants/assets.dart';
+import 'package:five_grocery_app/styles/app_colors.dart';
+import 'package:five_grocery_app/styles/app_text.dart';
 import 'package:five_grocery_app/views/onboard_view/view_two.dart';
 import 'package:flutter/material.dart';
 
@@ -13,17 +16,11 @@ class ViewOne extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 85),
-            Image.asset("assets/images/grocery.png", fit: BoxFit.fill),
+            Image.asset(Assets.imagesGrocerypng),
             SizedBox(height: 20),
-            Text(
-              "Welcome to Fresh Fruits",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
+            Text("Welcome to Fresh Fruits", style: AppText.bold24),
             SizedBox(height: 24),
-            Text(
-              "Grocery Application",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
+            Text("Grocery Application", style: AppText.bold18),
             SizedBox(height: 10),
             Text(
               "Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed do eiusmod tempor ",
@@ -41,7 +38,7 @@ class ViewOne extends StatelessWidget {
                     height: 7,
                     width: 25,
                     decoration: BoxDecoration(
-                      color: (i == 0) ? Color(0xff12B76A) : Color(0xffF2F2F2),
+                      color: (i == 0) ? AppColors.green : Color(0xffF2F2F2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -58,13 +55,10 @@ class ViewOne extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black,
-                backgroundColor: Color(0xffFEC54B),
+                backgroundColor: AppColors.primary,
                 fixedSize: Size(318, 60),
               ),
-              child: Text(
-                "NEXT",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+              child: Text("NEXT", style: AppText.bold16black),
             ),
           ],
         ),
