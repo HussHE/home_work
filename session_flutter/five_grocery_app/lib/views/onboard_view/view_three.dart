@@ -1,6 +1,7 @@
 import 'package:five_grocery_app/constants/assets.dart';
 import 'package:five_grocery_app/styles/app_colors.dart';
 import 'package:five_grocery_app/styles/app_text.dart';
+import 'package:five_grocery_app/widgets/custon_buttom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -55,14 +56,12 @@ class ViewThree extends StatelessWidget {
             ),
             SizedBox(height: 41),
 
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.black,
-                fixedSize: Size(318, 60),
-              ),
-              child: Text("CREATE AN ACCOUNT", style: AppText.bold16white),
+            CustomButtom(
+              onTap: () {},
+              textColor: Colors.white,
+              backgroundColor: Colors.black,
+              text: 'CREATE AN ACCOUNT',
+              textStyle: AppText.bold16white,
             ),
             SizedBox(height: 18),
 

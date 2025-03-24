@@ -2,6 +2,7 @@ import 'package:five_grocery_app/constants/assets.dart';
 import 'package:five_grocery_app/styles/app_colors.dart';
 import 'package:five_grocery_app/styles/app_text.dart';
 import 'package:five_grocery_app/views/onboard_view/view_two.dart';
+import 'package:five_grocery_app/widgets/custon_buttom.dart';
 import 'package:flutter/material.dart';
 
 class ViewOne extends StatelessWidget {
@@ -45,20 +46,17 @@ class ViewOne extends StatelessWidget {
               ],
             ),
             SizedBox(height: 41),
-
-            ElevatedButton(
-              onPressed: () {
+            CustomButtom(
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const ViewTwo()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: AppColors.primary,
-                fixedSize: Size(318, 60),
-              ),
-              child: Text("NEXT", style: AppText.bold16black),
+              textColor: Colors.black,
+              backgroundColor: AppColors.primary,
+              text: 'NEXT',
+              textStyle: AppText.bold16black,
             ),
           ],
         ),
