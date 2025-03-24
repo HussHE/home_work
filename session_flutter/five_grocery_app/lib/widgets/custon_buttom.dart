@@ -1,4 +1,3 @@
-import 'package:five_grocery_app/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtom extends StatelessWidget {
@@ -7,7 +6,8 @@ class CustomButtom extends StatelessWidget {
     required this.onTap,
     required this.textColor,
     required this.backgroundColor,
-    required this.text, required this.textStyle,
+    required this.text,
+    required this.textStyle,
   });
 
   final VoidCallback onTap;
